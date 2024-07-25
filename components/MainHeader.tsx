@@ -1,5 +1,6 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { DrawerActions, useNavigation } from "@react-navigation/native";
+import { moderateScale } from "@/utils/proportional.util";
 import { IconBell, IconMenu } from "@/assets/icons";
 import { Colors } from "@/constants/Colors";
 
@@ -53,7 +54,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   iconContent: {
-    // flex: 1,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "flex-end",
@@ -73,14 +73,14 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: "Axiforma",
-    fontSize: 18,
+    fontSize: moderateScale(18),
     fontWeight: "600",
     lineHeight: 29.36,
     textAlign: "left",
   },
   subTitle: {
     fontFamily: "GothamPro",
-    fontSize: 10,
+    fontSize: moderateScale(10),
     fontWeight: "400",
     lineHeight: 9.57,
     textAlign: "left",

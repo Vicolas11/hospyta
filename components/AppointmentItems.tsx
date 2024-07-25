@@ -1,8 +1,9 @@
-import { IconTimer, IconArrowRight } from "@/assets/icons";
+import { moderateScale } from "@/utils/proportional.util";
 import { View, Text, StyleSheet } from "react-native";
 import { appointmentData } from "@/data/main.data";
-import { Colors } from "@/constants/Colors";
 import { AntDesign } from "@expo/vector-icons";
+import { Colors } from "@/constants/Colors";
+import { IconTimer } from "@/assets/icons";
 
 export default function AppointmentItems() {
   return (
@@ -92,7 +93,7 @@ const styles = StyleSheet.create({
   txtDay: {
     flex: 1,
     fontFamily: "GothamPro",
-    fontSize: 17.24,
+    fontSize: moderateScale(17.24),
     fontWeight: "400",
     lineHeight: 17.24,
     letterSpacing: 0.01,
@@ -103,7 +104,7 @@ const styles = StyleSheet.create({
   txtWeek: {
     flex: 1,
     fontFamily: "GothamPro",
-    fontSize: 12.93,
+    fontSize: moderateScale(12.93),
     fontWeight: "400",
     lineHeight: 12.93,
     letterSpacing: 0.01,
@@ -115,7 +116,7 @@ const styles = StyleSheet.create({
   txtTime: {
     flex: 1,
     fontFamily: "GothamPro",
-    fontSize: 8,
+    fontSize: moderateScale(8),
     fontWeight: "400",
     lineHeight: 12.93,
     textAlign: "center",
@@ -128,7 +129,7 @@ const styles = StyleSheet.create({
   },
   content1: {
     fontFamily: "Poppins",
-    fontSize: 12.93,
+    fontSize: moderateScale(12.93),
     fontWeight: "400",
     lineHeight: 12.93,
     textAlign: "left",
@@ -138,7 +139,7 @@ const styles = StyleSheet.create({
   },
   content2: {
     fontFamily: "Poppins",
-    fontSize: 17.24,
+    fontSize: moderateScale(17.24),
     fontWeight: "600",
     lineHeight: 17.24,
     letterSpacing: 0.01,
@@ -148,7 +149,7 @@ const styles = StyleSheet.create({
   },
   content3: {
     fontFamily: "Poppins",
-    fontSize: 12.93,
+    fontSize: moderateScale(12.93),
     fontWeight: "400",
     lineHeight: 12.93,
     paddingTop: 2,
@@ -167,7 +168,7 @@ const styles = StyleSheet.create({
   },
   timer: {
     fontFamily: "GothamPro",
-    fontSize: 10,
+    fontSize: moderateScale(10),
     fontWeight: "400",
     lineHeight: 12.93,
     textAlign: "left",
@@ -187,7 +188,7 @@ const styles = StyleSheet.create({
   },
   txtView: {
     fontFamily: "GothamPro",
-    fontSize: 10,
+    fontSize: moderateScale(10),
     fontWeight: "400",
     lineHeight: 12.93,
     textAlign: "left",

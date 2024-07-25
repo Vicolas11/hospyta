@@ -1,6 +1,6 @@
+import { View, StyleSheet, Switch } from "react-native";
 import { Colors } from "@/constants/Colors";
 import React, { useState } from "react";
-import { View, StyleSheet, Switch } from "react-native";
 
 export default function CustomSwitch() {
   const [isEnabled, setIsEnabled] = useState(false);

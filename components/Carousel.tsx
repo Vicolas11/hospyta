@@ -30,7 +30,6 @@ export default function Carousel({
             setActiveIndex(index);
           }
         }}
-        // scrollEventThrottle={16}
       >
         {renderItems}
       </ScrollView>

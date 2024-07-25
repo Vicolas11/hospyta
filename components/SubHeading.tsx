@@ -1,5 +1,6 @@
-import { Colors } from "@/constants/Colors";
+import { moderateScale } from "@/utils/proportional.util";
 import { View, Text, StyleSheet } from "react-native";
+import { Colors } from "@/constants/Colors";
 
 export default function SubHeading({ title }: { title: string }) {
   return (
@@ -21,7 +22,7 @@ const styles = StyleSheet.create({
   },
   txtTitle: {
     fontFamily: "Axiforma",
-    fontSize: 16,
+    fontSize: moderateScale(16),
     fontWeight: "600",
     lineHeight: 24,
     textAlign: "left",
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
   },
   txtViewAll: {
     fontFamily: "GothamPro",
-    fontSize: 14,
+    fontSize: moderateScale(14),
     fontWeight: "400",
     lineHeight: 24,
     textAlign: "right",

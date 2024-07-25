@@ -1,4 +1,5 @@
 import { View, Text, StyleSheet, Image } from "react-native";
+import { moderateScale } from "@/utils/proportional.util";
 import { newsFeedData } from "@/data/main.data";
 import { Colors } from "@/constants/Colors";
 
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
   txtTitle: {
     marginVertical: 8,
     fontFamily: "Gilroy",
-    fontSize: 16,
+    fontSize: moderateScale(16),
     fontWeight: "400",
     lineHeight: 24,
     letterSpacing: -0.011428571306169033,
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
   },
   txtSubTitle: {
     fontFamily: "GothamPro",
-    fontSize: 18,
+    fontSize: moderateScale(18),
     fontWeight: "400",
     lineHeight: 17.23,
     textAlign: "left",

@@ -1,10 +1,10 @@
+import { moderateScale } from "@/utils/proportional.util";
 import CustomButton from "@/components/CustomButton";
 import BackButton from "@/components/BackButton";
 import { formData } from "@/data/login.data";
 import { Colors } from "@/constants/Colors";
 import { IconGoogle } from "@/assets/icons";
 import { Input } from "@/components/Input";
-import React from "react";
 import {
   View,
   Text,
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
   txtHello: {
     marginBottom: 16,
     fontFamily: "Axiforma",
-    fontSize: 32,
+    fontSize: moderateScale(32),
     fontWeight: "600",
     textAlign: "center",
     color: Colors.textColor1,
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     width: "70%",
     marginHorizontal: "auto",
     marginBottom: 15,
-    fontSize: 16,
+    fontSize: moderateScale(16),
     fontWeight: "400",
     lineHeight: 24,
     textAlign: "center",
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
   },
   txtForgot: {
     fontFamily: "GothamPro",
-    fontSize: 14,
+    fontSize: moderateScale(14),
     fontWeight: "400",
     lineHeight: 24,
     textAlign: "right",
@@ -145,13 +145,13 @@ const styles = StyleSheet.create({
   },
   googleText: {
     fontFamily: "Poppins",
-    fontSize: 16,
+    fontSize: moderateScale(16),
     fontWeight: "500",
     color: Colors.textColor2,
   },
   txtAlready: {
     fontFamily: "GothamPro",
-    fontSize: 16,
+    fontSize: moderateScale(16),
     marginTop: 12,
     fontWeight: "400",
     textAlign: "center",
@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
   },
   txtOrSign: {
     fontFamily: "Poppins",
-    fontSize: 16,
+    fontSize: moderateScale(16),
     fontWeight: "400",
     textAlign: "center",
     paddingHorizontal: 8,

@@ -1,3 +1,4 @@
+import { moderateScale } from "@/utils/proportional.util";
 import CustomButton from "@/components/CustomButton";
 import BackButton from "@/components/BackButton";
 import { formData } from "@/data/register.data";
@@ -121,17 +122,17 @@ const styles = StyleSheet.create({
   txtRegister: {
     marginBottom: 16,
     fontFamily: "Axiforma",
-    fontSize: 32,
+    fontSize: moderateScale(32),
     fontWeight: "600",
     textAlign: "center",
     color: Colors.textColor1,
   },
   txtFill: {
     fontFamily: "GothamPro",
-    width: "70%",
+    width: "85%",
     marginHorizontal: "auto",
     marginBottom: 15,
-    fontSize: 16,
+    fontSize: moderateScale(16),
     fontWeight: "400",
     lineHeight: 24,
     textAlign: "center",
@@ -145,16 +146,17 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     flex: 1,
     alignItems: "center",
+    columnGap: 10,
   },
   googleText: {
     fontFamily: "Poppins",
-    fontSize: 16,
+    fontSize: moderateScale(16),
     fontWeight: "500",
     color: Colors.textColor2,
   },
   txtAlready: {
     fontFamily: "GothamPro",
-    fontSize: 16,
+    fontSize: moderateScale(16),
     marginTop: 12,
     fontWeight: "400",
     textAlign: "center",
@@ -166,7 +168,7 @@ const styles = StyleSheet.create({
   },
   txtAccept: {
     fontFamily: "GothamPro",
-    fontSize: 12,
+    fontSize: moderateScale(12),
     fontWeight: "400",
     lineHeight: 16.44,
     textAlign: "left",
@@ -188,7 +190,7 @@ const styles = StyleSheet.create({
   },
   txtOrSign: {
     fontFamily: "Poppins",
-    fontSize: 16,
+    fontSize: moderateScale(16),
     fontWeight: "400",
     textAlign: "center",
     paddingHorizontal: 8,

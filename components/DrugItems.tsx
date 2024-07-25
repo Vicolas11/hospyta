@@ -1,7 +1,8 @@
 import { View, Text, StyleSheet, Image } from "react-native";
-import { IconNaira } from "@/assets/icons";
+import { moderateScale } from "@/utils/proportional.util";
 import { Colors } from "@/constants/Colors";
 import { drugData } from "@/data/main.data";
+import { IconNaira } from "@/assets/icons";
 
 export default function DrugItem() {
   return (
@@ -43,7 +44,6 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     alignItems: "center",
     justifyContent: "space-between",
-    // marginHorizontal: "auto",
   },
   section: {
     flexDirection: "row",
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   },
   txtDrug: {
     fontFamily: "GothamPro",
-    fontSize: 26.73,
+    fontSize: moderateScale(26.73),
     fontWeight: "400",
     lineHeight: 25.58,
     letterSpacing: 0.546207070350647,
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
   txtDesc: {
     fontFamily: "GothamPro",
-    fontSize: 12.55,
+    fontSize: moderateScale(12.55),
     fontWeight: "400",
     lineHeight: 16,
     letterSpacing: 0.24275869131088257,
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
   },
   txtPrice: {
     fontFamily: "GothamPro",
-    fontSize: 20.55,
+    fontSize: moderateScale(20.55),
     fontWeight: "700",
     lineHeight: 16,
     letterSpacing: 0.24275869131088257,
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
   },
   txtPriceSlash: {
     fontFamily: "GothamPro",
-    fontSize: 13.55,
+    fontSize: moderateScale(13.55),
     fontWeight: "400",
     lineHeight: 16,
     letterSpacing: 0.24275869131088257,

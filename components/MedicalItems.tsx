@@ -1,4 +1,5 @@
 import { View, Text, Image, StyleSheet } from "react-native";
+import { moderateScale } from "@/utils/proportional.util";
 import { IMedData } from "@/interfaces";
 
 export default function MedicalItems({ item }: { item: IMedData[] }) {
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
   txtTag: {
     color: "#fff",
     fontFamily: "GothamPro",
-    fontSize: 10,
+    fontSize: moderateScale(10),
     fontWeight: "400",
     lineHeight: 9.57,
     textAlign: "center",
@@ -59,13 +60,13 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: "GothamPro",
-    fontSize: 10,
+    fontSize: moderateScale(10),
     fontWeight: "400",
     textAlign: "left",
   },
   price: {
     fontFamily: "GothamPro",
-    fontSize: 12,
+    fontSize: moderateScale(12),
     fontWeight: "700",
     textAlign: "left",
   },

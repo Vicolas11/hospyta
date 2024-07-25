@@ -1,14 +1,12 @@
+import { moderateScale, proportionHeight, proportionWidth } from "@/utils/proportional.util";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { drawerItemListIcon } from "@/data/drawer.data";
 import { Ionicons } from "@expo/vector-icons";
 import { Colors } from "@/constants/Colors";
 import {
   DrawerContentComponentProps,
   DrawerContentScrollView,
-  DrawerItemList,
 } from "@react-navigation/drawer";
-import { proportionHeight, proportionWidth } from "@/utils/proportional.util";
-import { IconWallet } from "@/assets/icons";
-import { drawerItemListIcon } from "@/data/drawer.data";
 
 export default function CustomDrawerContent(
   props: DrawerContentComponentProps
@@ -75,7 +73,7 @@ const styles = StyleSheet.create({
   },
   welcomeText: {
     color: "#fff",
-    fontSize: 18,
+    fontSize: moderateScale(18),
     fontFamily: "Axiforma",
     fontWeight: "600",
     lineHeight: 29.36,
@@ -84,7 +82,7 @@ const styles = StyleSheet.create({
   subText: {
     color: "#fff",
     opacity: 0.9,
-    fontSize: 10,
+    fontSize: moderateScale(10),
     fontFamily: "GothamPro",
     lineHeight: 11.72,
   },
@@ -111,7 +109,7 @@ const styles = StyleSheet.create({
   drawerItemText: {
     color: "#000",
     fontFamily: "Axiforma",
-    fontSize: 16,
+    fontSize: moderateScale(16),
     fontWeight: "400",
     lineHeight: 25.34,
     textAlign: "left",

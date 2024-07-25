@@ -1,3 +1,4 @@
+import { moderateScale } from "@/utils/proportional.util";
 import { View, Text, StyleSheet } from "react-native";
 import { iconLabel } from "@/data/main.data";
 import { Colors } from "@/constants/Colors";
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
   },
   label: {
     fontFamily: "Nunito",
-    fontSize: 14,
+    fontSize: moderateScale(14),
     fontWeight: "700",
     lineHeight: 19.1,
     textAlign: "left",

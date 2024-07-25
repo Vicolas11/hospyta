@@ -1,5 +1,7 @@
-import { Colors } from "@/constants/Colors";
+import { moderateScale } from "@/utils/proportional.util";
 import React, { useState, useRef } from "react";
+import { ICustomButton } from "@/interfaces";
+import { Colors } from "@/constants/Colors";
 import {
   Text,
   StyleSheet,
@@ -7,17 +9,7 @@ import {
   Easing,
   Pressable,
   Platform,
-  StyleProp,
-  ViewStyle,
-  View,
 } from "react-native";
-
-interface ICustomButton {
-  title: string | React.ReactElement;
-  onPress: () => void;
-  isOutline?: boolean;
-  xtraStyle?: StyleProp<ViewStyle>;
-}
 
 export default function CustomButton({
   title,
@@ -85,7 +77,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontWeight: "400",
     fontFamily: "GothamPro",
-    fontSize: 14,
+    fontSize: moderateScale(14),
     textAlign: "center",
   },
 });

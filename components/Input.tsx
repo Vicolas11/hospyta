@@ -1,14 +1,10 @@
 import { View, TextInput, Text, StyleSheet, Pressable } from "react-native";
+import { moderateScale } from "@/utils/proportional.util";
 import { SimpleLineIcons } from "@expo/vector-icons";
 import { IconEyeSlash } from "@/assets/icons";
 import { Colors } from "@/constants/Colors";
 import { useRef, useState } from "react";
-
-interface InputType {
-  placeHolder: string;
-  isPasswordInput?: boolean;
-  Icon: React.ReactNode;
-}
+import { InputType } from "@/interfaces";
 
 export const Input = ({ Icon, placeHolder, isPasswordInput }: InputType) => {
   const [hidePassword, setHidePassword] = useState(true);
@@ -90,7 +86,7 @@ const styles = StyleSheet.create({
     color: Colors.textColor1,
     zIndex: 1,
     fontFamily: "GothamPro",
-    fontSize: 16,
+    fontSize: moderateScale(16),
     fontWeight: "400",
     textAlign: "left",
   },
@@ -105,7 +101,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     paddingLeft: 10,
     fontWeight: "400",
-    fontSize: 16,
+    fontSize: moderateScale(16),
     width: "85%",
     height: "100%",
   },
