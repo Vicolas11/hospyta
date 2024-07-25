@@ -1,18 +1,22 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 import { Colors } from "@/constants/Colors";
+import { StatusBar } from "expo-status-bar";
 import React from "react";
 
 export default function SplashScreen() {
   return (
-    <View style={styles.screen}>
-      <View style={styles.splashContainer}>
-        <Image
-          source={require("../assets/images/splash_1.png")}
-          style={styles.splashImage}
-        />
+    <>
+      <StatusBar style="dark" />
+      <View style={styles.screen}>
+        <View style={styles.splashContainer}>
+          <Image
+            source={require("../assets/images/splash_1.png")}
+            style={styles.splashImage}
+          />
+        </View>
+        <Text style={styles.text}>Consult...</Text>
       </View>
-      <Text style={styles.text}>Consult...</Text>
-    </View>
+    </>
   );
 }
 
@@ -35,6 +39,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontFamily: "GothamPro",
     color: Colors.textColor,
-    fontSize: 18
+    fontSize: 18,
   },
 });
