@@ -1,5 +1,5 @@
+import { moderateScale, proportionHeight, proportionWidth } from "@/utils/proportional.util";
 import { View, Text, StyleSheet, Image, ImageBackground } from "react-native";
-import { proportionHeight, proportionWidth } from "@/utils/proportional.util";
 import { StatusBar, StatusBarStyle } from "expo-status-bar";
 import { LinearGradient } from "expo-linear-gradient";
 import CustomButton from "@/components/CustomButton";
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     borderWidth: 2,
   },
   title: {
-    fontSize: 27,
+    fontSize: moderateScale(27),
     fontFamily: "Poppins",
     lineHeight: 40.5,
     fontWeight: "500",
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     color: "#ffffff",
   },
   with: {
-    fontSize: 16,
+    fontSize: moderateScale(16),
     fontFamily: "GothamPro",
     fontWeight: "400",
     textAlign: "left",
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontWeight: "400",
     fontFamily: "GothamPro",
-    fontSize: 14,
+    fontSize: moderateScale(14),
   },
   signUpButton: {
     width: "100%",
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontWeight: "400",
     fontFamily: "GothamPro",
-    fontSize: 14,
+    fontSize: moderateScale(14),
   },
 });
 

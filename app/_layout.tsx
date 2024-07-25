@@ -4,8 +4,10 @@ import { useEffect, useState } from "react";
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import "react-native-reanimated";
+import { StatusBar } from "react-native";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
+StatusBar.setBarStyle('light-content', true);
 MainSplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {

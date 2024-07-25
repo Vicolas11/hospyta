@@ -2,12 +2,15 @@ import { View, Text, ScrollView, StyleSheet, SafeAreaView } from "react-native";
 import CommunityFeedItems from "@/components/CommunityFeedItems";
 import { IconArrowRight, IconCalendar } from "@/assets/icons";
 import AppointmentItems from "@/components/AppointmentItems";
+import { moderateScale } from "@/utils/proportional.util";
 import NewsFeedItems from "@/components/NewsFeedItems";
 import MedicalItems from "@/components/MedicalItems";
+import MainHeader from "@/components/MainHeader";
 import SubHeading from "@/components/SubHeading";
 import CustomSwitch from "@/components/Switch";
 import DrugItem from "@/components/DrugItems";
 import Carousel from "@/components/Carousel";
+import { StatusBar } from "expo-status-bar";
 import { Colors } from "@/constants/Colors";
 import {
   appointmentData,
@@ -16,8 +19,6 @@ import {
   drugData,
   medicineData,
 } from "@/data/main.data";
-import MainHeader from "@/components/MainHeader";
-import { StatusBar } from "expo-status-bar";
 
 export default function MainScreen() {
   return (
@@ -99,7 +100,7 @@ const styles = StyleSheet.create({
   },
   txtAvail: {
     fontFamily: "GothamPro",
-    fontSize: 14,
+    fontSize: moderateScale(14),
     fontWeight: "400",
     lineHeight: 12.93,
     textAlign: "left",
@@ -119,7 +120,7 @@ const styles = StyleSheet.create({
   },
   txtSch: {
     fontFamily: "GothamPro",
-    fontSize: 12,
+    fontSize: moderateScale(12),
     fontWeight: "400",
     lineHeight: 11.48,
     letterSpacing: 0.03,
